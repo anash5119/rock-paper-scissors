@@ -1,0 +1,41 @@
+body {
+    background-color: rgb(139, 13, 13);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin:0;
+    padding: 0;
+    height: 100vh;
+}
+
+.resultContainer{
+    display: flex;
+    justify-content: space-between;
+    width: 50vh;
+    margin:20px;
+}
+
+.computerResult{
+    color: white;
+}
+
+.playerResult{
+    color: white;
+}
+
+.winOverlay{
+    display:none;
+}
+
+.winText{
+
+}
+
+.loseOverlay{
+    display: none;
+}
+
+.loseText{
+
+}
