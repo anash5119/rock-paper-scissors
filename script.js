@@ -79,6 +79,7 @@ function winAnimation(){
     let element = document.getElementById("overlay");
     let elementText = document.getElementById("overlayText");
     elementText.textContent = "You Win";
+    elementText.style.color = "white";
 
     //add fade in effect
     let opacity = 0; 
@@ -97,6 +98,7 @@ function loseAnimation(){
     let element = document.getElementById("overlay");
     let elementText = document.getElementById("overlayText");
     elementText.textContent = "You Lose";
+    elementText.style.color = "#780000";
 
     //add fade in effect
     let opacity = 0; 

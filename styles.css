@@ -1,8 +1,9 @@
 body{
     margin: 0;
+    font-family: "dark-souls";
 }
 .main {
-    background-color: rgb(139, 13, 13);
+    background-color: #520000;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -12,6 +13,50 @@ body{
     height: 100vh;
 }
 
+.reset{
+    margin: 20px;
+    font-family: "dark-souls";
+    border-radius: 50%;
+    height: 35px;;
+    border-style: none;
+    background-color: rgb(17, 5, 5);
+    color: orangered;
+    transition-duration: 0.2s;
+}
+
+.reset:hover{
+    background-color: orangered;
+    color: black;
+}
+
+#rock,
+#paper,
+#scissors {
+    background-color: #780000;
+    transition-duration: 0.5s;
+}
+
+#rock:hover{
+    background-color: grey;
+}
+
+.tryAgain{
+    border-radius: 50%;
+    height: 75px;
+    width: 150px;
+    border-style: none;
+    font-family: "dark-souls";
+    font-size: 20px;
+}
+
+#paper:hover{
+    background-color: rgb(211, 211, 174);
+}
+
+#scissors:hover{
+    background-color: #4f5d61;
+}
+
 .resultContainer{
     display: flex;
     justify-content: space-between;
@@ -19,12 +64,40 @@ body{
     margin:20px;
 }
 
-.computerResult{
-    color: white;
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 75px;
 }
 
+.playOption{
+    height: 250px;
+    width: 250px;
+    font-family: "dark-souls";
+    font-size: 20px;
+    border-radius: 100%;
+    border-style: none;
+}
+.botCont{
+    display: flex; 
+    gap: 75px;
+}
+
+.computerResult{
+    color: white;
+    font-size: 20px;;
+}
+.compSpan {
+    font-size: 30px;;
+}
+
+.playerSpan{
+    font-size: 30px;
+}
 .playerResult{
     color: white;
+    font-size: 20px;;
 }
 
 .overlay{

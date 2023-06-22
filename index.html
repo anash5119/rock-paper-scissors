@@ -3,6 +3,11 @@
     <meta charset="UTF-8"></meta>
     <title>Rock Paper Scissors</title>
     <link rel="stylesheet" href="styles.css">
+    <style> @font-face{
+            font-family: dark-souls; 
+            src: url(OptimusPrincepsSemiBold.ttf);
+            }
+    </style>
     <script src="script.js" defer></script>
     
 </head>
@@ -15,14 +20,18 @@
     </div>
 
     <div class="main">
-        <div><button class="reset"> Reset </button></div>
+        <div><button class="reset"> Reload Save </button></div>
         <div class="container">
-            <button class="playOption" id="rock"> Rock </button>
-            <button class="playOption" id="paper"> Paper </button>
-            <button class="playOption" id="scissors"> Scissors </button>
+            <div>
+                <button class="playOption" id="rock"> Rock </button>
+            </div>
+            <div class="botCont">
+                <button class="playOption" id="paper"> Paper </button>
+                <button class="playOption" id="scissors"> Scissors </button>
+            </div>
         </div>
         <div class="resultContainer"> 
-            <div class="computerResult"> Computer: <span class="compSpan">0</span></div>
+            <div class="computerResult"> Lord of RPS: <span class="compSpan">0</span></div>
             <div class="playerResult"> Player: <span class="playerSpan">0</span></div>
         </div>
     </div>
