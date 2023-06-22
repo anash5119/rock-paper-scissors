@@ -16,8 +16,9 @@ resetButton.addEventListener("click", () => {
     compSpan.textContent = 0;
     playerWins = 0;
     compWins = 0;
+    document.getElementById("winOverlay").style.display="none";
+    document.getElementById("loseOverlay").style.display="none";
 });
-
 
 
 function getComputerChoice(){
@@ -52,7 +53,6 @@ function play(playerSelection, computerSelection){
 }
 
 function game(player){
-    //5 round match
     let computer = getComputerChoice();
     console.log(play(player, computer))
     
@@ -70,9 +70,9 @@ function game(player){
 }
 
 function winAnimation(){
-    document.getElementByClassName("winOverlay").style.display="block";
+    document.getElementById("winOverlay").style.display="flex";
 }
 
 function loseAnimation(){
-
+    document.getElementById("loseOverlay").style.display="flex";
 }

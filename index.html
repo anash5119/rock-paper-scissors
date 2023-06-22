@@ -6,25 +6,30 @@
     <script src="script.js" defer></script>
     
 </head>
-<body class="main">
-    <div class="winOverlay">
-        <div class="winText">Enemy Fallen</div>
-        <button class="tryAgain"></button>
+<body>
+    <div id="winOverlay" class="winOverlay">
+        <div class="winCont">
+            <div class="winText">Enemy Fallen</div>
+            <button class="reset"> Play Again</button>
+        </div>
     </div>
 
-    <div class="loseOverlay">
-        <div class="loseText">You Lose</div>
-        <button class="tryAgain"></button>
+    <div id="loseOverlay" class="loseOverlay">
+        <div class="loseCont">
+            <div class="loseText">You Lose</div>
+            <button class="reset"> Play Again</button>
+        </div>
     </div>
-
-    <div><button class="reset"> Reset </button></div>
-    <div class="container">
-        <button class="playOption" id="rock"> Rock </button>
-        <button class="playOption" id="paper"> Paper </button>
-        <button class="playOption" id="scissors"> Scissors </button>
-    </div>
-    <div class="resultContainer"> 
-        <div class="computerResult"> Computer: <span class="compSpan">0</span></div>
-        <div class="playerResult"> Player: <span class="playerSpan">0</span></div>
+    <div class="main">
+        <div><button class="reset"> Reset </button></div>
+        <div class="container">
+            <button class="playOption" id="rock"> Rock </button>
+            <button class="playOption" id="paper"> Paper </button>
+            <button class="playOption" id="scissors"> Scissors </button>
+        </div>
+        <div class="resultContainer"> 
+            <div class="computerResult"> Computer: <span class="compSpan">0</span></div>
+            <div class="playerResult"> Player: <span class="playerSpan">0</span></div>
+        </div>
     </div>
 </body>
