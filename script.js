@@ -9,17 +9,23 @@ buttons.forEach((button) => {
 });
 
 const resetButton = document.querySelector('.reset');
-resetButton.addEventListener("click", () => {
+resetButton.addEventListener("click", () => { reset()});
+
+const tryAgainButton = document.querySelector('.tryAgain');
+tryAgainButton.addEventListener("click", () => { reset()});
+
+function reset(){
     const playerSpan = document.querySelector(".playerSpan")
     playerSpan.textContent = 0;
     const compSpan = document.querySelector(".compSpan")
     compSpan.textContent = 0;
     playerWins = 0;
     compWins = 0;
-    document.getElementById("winOverlay").style.display="none";
-    document.getElementById("loseOverlay").style.display="none";
-});
 
+    //reset button and try again are the same except try again
+    //needs to also get rid of the overlay
+    document.getElementById("overlay").style.display="none";
+}
 
 function getComputerChoice(){
     const arrChoice = ["Rock", "Paper", "Scissors"];
@@ -35,7 +41,7 @@ function play(playerSelection, computerSelection){
         
         playerWins++; //add to the player wins counter
         const playerSpan = document.querySelector(".playerSpan")
-        playerSpan.textContent = playerWins;
+        playerSpan.textContent = playerWins; //set UI counter to equal player wins
         return "You win! " + playerSelection + " beats " + computerSelection;
     }
     else if (playerChoice == "rock" && computerSelection == "Paper"
@@ -70,9 +76,36 @@ function game(player){
 }
 
 function winAnimation(){
-    document.getElementById("winOverlay").style.display="flex";
+    let element = document.getElementById("overlay");
+    let elementText = document.getElementById("overlayText");
+    elementText.textContent = "You Win";
+
+    //add fade in effect
+    let opacity = 0; 
+    element.style.display="flex";
+    let fadeIn = setInterval(() => {
+        if (opacity >= 1) {
+            clearInterval(fadeIn);
+        }
+        element.style.opacity = opacity;
+        opacity += .01;
+    }, 10);
+
 }
 
 function loseAnimation(){
-    document.getElementById("loseOverlay").style.display="flex";
+    let element = document.getElementById("overlay");
+    let elementText = document.getElementById("overlayText");
+    elementText.textContent = "You Lose";
+
+    //add fade in effect
+    let opacity = 0; 
+    element.style.display="flex";
+    let fadeIn = setInterval(() => {
+        if (opacity >= 1) {
+            clearInterval(fadeIn);
+        }
+        element.style.opacity = opacity;
+        opacity += .01;
+    }, 10);
 }

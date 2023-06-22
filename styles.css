@@ -27,7 +27,7 @@ body{
     color: white;
 }
 
-.winOverlay{
+.overlay{
     position: fixed;
     display: none;
     align-items: center;
@@ -39,11 +39,12 @@ body{
     right:0;
     left:0;
     z-index: 2;
+    
 }
 
-.winCont {
+.resultCont {
     background-color: black;
-    height: 50%;
+    height: 100%;
     width: 100%;
     position: absolute;
     display: flex;
@@ -52,39 +53,9 @@ body{
     align-items: center;
     gap: 50px;
     
+    
 }
-.winText{
-    color: red;
-    font-size: 90px;
-}
-
-.loseOverlay{
-    position: fixed;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    max-width: 100%;
-    top: 0;
-    bottom:0;
-    right:0;
-    left:0;
-    z-index: 2;
-}
-
-.loseCont{
-    background-color: black;
-    height: 50%;
-    width: 100%;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-}
-
-.loseText{
+#overlayText{
     color: red;
     font-size: 90px;
 }
